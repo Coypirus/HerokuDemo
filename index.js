@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.set('view engine', 'ejs')
 
-app.listen(4000, ()=> {
+app.listen(PORT, ()=> {
     console.log('App listening on port 4000')
 })
 app.get('/', (req, res)=> {
