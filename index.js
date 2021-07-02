@@ -5,6 +5,8 @@ const app = new express()
 const ejs = require('ejs')
 const mongoose = require('mongoose')
 
+const PORT = process.env.port || 3000;
+
 var dev_db_url = "mongodb+srv://Coypirus:thisismypassword@cluster0.6o2sd.mongodb.net/heroku_demo_database?retryWrites=true&w=majority"
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 const BlogPost = require('./models/BlogPost.js')
