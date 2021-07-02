@@ -5,7 +5,6 @@ const app = new express()
 const ejs = require('ejs')
 const mongoose = require('mongoose')
 
-const PORT = process.env.port || 3000;
 
 var dev_db_url = "mongodb+srv://Coypirus:thisismypassword@cluster0.6o2sd.mongodb.net/heroku_demo_database?retryWrites=true&w=majority"
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
@@ -19,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.set('view engine', 'ejs')
 
-app.listen(PORT, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log('App listening on port 4000')
 })
 app.get('/', (req, res)=> {
